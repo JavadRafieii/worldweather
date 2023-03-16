@@ -1,0 +1,420 @@
+@import '_Variables.scss';
+@import '_Mixins.scss';
+
+// reset css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+// reset css
+body {
+  background-color: $body_backgroundcolor;
+  overflow: hidden;
+}
+
+.main-container {
+  max-width: 1990px;
+  margin: auto;
+}
+
+// weather app
+.parent-weather-app {
+  background: rgb(35, 0, 91);
+  background: linear-gradient(0deg, rgba(35, 0, 91, 1) 35%, rgba(64, 11, 152, 1) 100%);
+  border-radius: $rounded;
+  -webkit-border-radius: $rounded;
+  -moz-border-radius: $rounded;
+  -ms-border-radius: $rounded;
+  -o-border-radius: $rounded;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  margin: 50px 0 0 0;
+
+  .location-weather {
+    @include font-style ($white, 1.8rem, $font-family, center);
+  }
+
+  .search {
+
+    .btn-search {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      &:hover i {
+        font-size: 30px;
+      }
+
+      i {
+        font-size: 20px;
+        color: $white;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+      }
+
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+  }
+
+  .weather-logo {
+    figure {
+      width: 80px;
+      height: 80px;
+      background-color: $blue_color;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      border-radius: $rounded;
+      -webkit-border-radius: $rounded;
+      -moz-border-radius: $rounded;
+      -ms-border-radius: $rounded;
+      -o-border-radius: $rounded;
+    }
+  }
+
+  .slider-weather-app {
+
+    .swiper-3d .swiper-slide {
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+    }
+
+    .swiper-slide-active {
+      filter: blur(0px) !important;
+      -webkit-filter: blur(0px) !important;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      // width: 250px;
+      // height: 250px;
+      border-radius: $rounded;
+      -webkit-border-radius: $rounded;
+      -moz-border-radius: $rounded;
+      -ms-border-radius: $rounded;
+      -o-border-radius: $rounded;
+      overflow: hidden;
+      background: rgb(55, 108, 206);
+      background: linear-gradient(0deg, rgba(55, 108, 206, 1) 35%, rgba(72, 192, 250, 1) 100%);
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+
+    .swiper-button-prev {
+      background: rgba(255, 255, 255, 0.39);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6.1px);
+      -webkit-backdrop-filter: blur(6.1px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    .swiper-button-prev::after {
+      display: none;
+    }
+
+    .swiper-button-prev::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: url(../weatherImage/arrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .swiper-button-next::after {
+      @extend .swiper-button-prev;
+    }
+
+    .swiper-button-next {
+      @extend.swiper-button-prev;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    }
+
+  }
+
+  .parent-weather-icon {
+    width: 130px;
+    height: 130px;
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .temp-now {
+    display: block;
+    @include font-style ($white, 3rem, $font-family, center);
+    margin: auto;
+  }
+
+  .temp-min-now {
+    @include font-style ($white_op, 1.4rem, $font-family, center);
+  }
+
+  .temp-max-now {
+    @extend .temp-min-now;
+  }
+
+  .descriptions-now {
+    display: block;
+    @include font-style ($white, 1.8rem, $font-family, center);
+  }
+
+  .time-now {
+    display: block;
+    @include font-style ($white, 1rem, $font-family, center);
+  }
+
+  .date-now {
+    @extend .time-now;
+  }
+
+  .humidity-windSpeed {
+    display: block;
+    @include font-style ($white, 1.8rem, $font-family, center);
+  }
+}
+
+// weather app
+
+.container-loading {
+  width: 100%;
+  height: 100%;
+  background-color: $main_background_color_app2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cloud {
+  width: 250px;
+}
+
+.front {
+  padding-top: 45px;
+  margin-left: 25px;
+  display: inline;
+  position: absolute;
+  z-index: 11;
+  animation: clouds 8s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.back {
+  margin-top: -30px;
+  margin-left: 200px;
+  z-index: 12;
+  animation: clouds 12s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.right-front {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -25px;
+  z-index: 5;
+}
+
+.left-front {
+  width: 65px;
+  height: 65px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.right-back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -20px;
+  z-index: 5;
+}
+
+.left-back {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.sun {
+  width: 120px;
+  height: 120px;
+  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+  background: linear-gradient(to right, #fcbb04, #fffc00);
+  border-radius: 60px;
+  display: inline;
+  position: absolute;
+}
+
+.sunshine {
+  animation: sunshines 2s infinite;
+}
+
+@keyframes sunshines {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(15px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+.parent-main-search {
+  background-color: $main_background_color_app2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1001;
+
+  .title-logo {
+    @include font-style ($white, 2rem, $font-family, center);
+  }
+
+  figure {
+    width: 200px;
+    height: 200px;
+    background-color: $blue_color;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+  }
+
+  .input-search {
+    width: 300px;
+    @include font-style ($main_background_color_app2, 1rem, $font-family, left);
+  }
+
+  ::placeholder {
+    @include font-style ($main_background_color_app2, 1rem, $font-family, left);
+  }
+
+  .signature {
+    @include font-style ($white, 1.5rem, $font-signature, left);
+    left: 20px;
+    bottom: 20px;
+  }
+
+}
+
+@media (min-width: 576px) {
+  .back {
+    margin-left: 300px;
+  }
+
+  .parent-main-search {
+    .input-search {
+      width: 400px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .parent-weather-app {
+    .temp-now {
+      font-size: 4rem;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}

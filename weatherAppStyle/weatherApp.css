@@ -1,0 +1,377 @@
+@font-face {
+  font-family: Urbanist-VariableFont_wght;
+  src: url(../fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: GreatVibes-Regular;
+  src: url(../fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  background-color: #5f1bcb;
+  overflow: hidden;
+}
+
+.main-container {
+  max-width: 1990px;
+  margin: auto;
+}
+
+.parent-weather-app {
+  background: rgb(35, 0, 91);
+  background: linear-gradient(0deg, rgb(35, 0, 91) 35%, rgb(64, 11, 152) 100%);
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  margin: 50px 0 0 0;
+}
+.parent-weather-app .location-weather {
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+}
+.parent-weather-app .search .btn-search {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.parent-weather-app .search .btn-search:hover i {
+  font-size: 30px;
+}
+.parent-weather-app .search .btn-search i {
+  font-size: 20px;
+  color: #fff;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.parent-weather-app .weather-logo figure {
+  width: 80px;
+  height: 80px;
+  background-color: #47bffb;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+.parent-weather-app .weather-logo figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.parent-weather-app .slider-weather-app .swiper-3d .swiper-slide {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.parent-weather-app .slider-weather-app .swiper-slide-active {
+  filter: blur(0px) !important;
+  -webkit-filter: blur(0px) !important;
+}
+.parent-weather-app .slider-weather-app .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.parent-weather-app .slider-weather-app .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  overflow: hidden;
+  background: rgb(55, 108, 206);
+  background: linear-gradient(0deg, rgb(55, 108, 206) 35%, rgb(72, 192, 250) 100%);
+}
+.parent-weather-app .slider-weather-app .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.parent-weather-app .slider-weather-app .swiper-button-prev, .parent-weather-app .slider-weather-app .swiper-button-next, .parent-weather-app .slider-weather-app .swiper-button-next::after {
+  background: rgba(255, 255, 255, 0.39);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.parent-weather-app .slider-weather-app .swiper-button-prev::after, .parent-weather-app .slider-weather-app .swiper-button-next::after {
+  display: none;
+}
+.parent-weather-app .slider-weather-app .swiper-button-prev::before, .parent-weather-app .slider-weather-app .swiper-button-next::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(../weatherImage/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.parent-weather-app .slider-weather-app .swiper-button-next {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.parent-weather-app .parent-weather-icon {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+}
+.parent-weather-app .parent-weather-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.parent-weather-app .temp-now {
+  display: block;
+  color: #fff;
+  font-size: 3rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+  margin: auto;
+}
+.parent-weather-app .temp-min-now, .parent-weather-app .temp-max-now {
+  color: rgba(255, 255, 255, 0.5098039216);
+  font-size: 1.4rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+}
+.parent-weather-app .descriptions-now {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+}
+.parent-weather-app .time-now, .parent-weather-app .date-now {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+}
+.parent-weather-app .humidity-windSpeed {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+}
+
+.container-loading {
+  width: 100%;
+  height: 100%;
+  background-color: #23005b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cloud {
+  width: 250px;
+}
+
+.front {
+  padding-top: 45px;
+  margin-left: 25px;
+  display: inline;
+  position: absolute;
+  z-index: 11;
+  animation: clouds 8s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.back {
+  margin-top: -30px;
+  margin-left: 200px;
+  z-index: 12;
+  animation: clouds 12s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.right-front {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -25px;
+  z-index: 5;
+}
+
+.left-front {
+  width: 65px;
+  height: 65px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.right-back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -20px;
+  z-index: 5;
+}
+
+.left-back {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.sun {
+  width: 120px;
+  height: 120px;
+  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+  background: linear-gradient(to right, #fcbb04, #fffc00);
+  border-radius: 60px;
+  display: inline;
+  position: absolute;
+}
+
+.sunshine {
+  animation: sunshines 2s infinite;
+}
+
+@keyframes sunshines {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+@keyframes clouds {
+  0% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+.parent-main-search {
+  background-color: #23005b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1001;
+}
+.parent-main-search .title-logo {
+  color: #fff;
+  font-size: 2rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: center;
+}
+.parent-main-search figure {
+  width: 200px;
+  height: 200px;
+  background-color: #47bffb;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+.parent-main-search .input-search {
+  width: 300px;
+  color: #23005b;
+  font-size: 1rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: left;
+}
+.parent-main-search ::placeholder {
+  color: #23005b;
+  font-size: 1rem;
+  font-family: Urbanist-VariableFont_wght;
+  text-align: left;
+}
+.parent-main-search .signature {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: GreatVibes-Regular;
+  text-align: left;
+  left: 20px;
+  bottom: 20px;
+}
+
+@media (min-width: 576px) {
+  .back {
+    margin-left: 300px;
+  }
+  .parent-main-search .input-search {
+    width: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .parent-weather-app .temp-now {
+    font-size: 4rem;
+  }
+}
+
+/*# sourceMappingURL=weatherApp.css.map */
