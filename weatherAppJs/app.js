@@ -35,7 +35,7 @@ inputSearch.addEventListener('keydown', function (element) {
     document.querySelector('.parent-main-search').style.opacity = 0;
     document.querySelector('.parent-main-search').style.visibility = 'hidden';
     let weather = new XMLHttpRequest();
-    weather.open('GET', `http://api.openweathermap.org/data/2.5/forecast?q=${valSearch}&appid=9b017c504d9f2c19bc949947cf34719c`);
+    weather.open('GET', `https://api.openweathermap.org/data/2.5/forecast?q=${valSearch}&appid=9b017c504d9f2c19bc949947cf34719c`);
     weather.send();
 
     weather.onreadystatechange = function () {
