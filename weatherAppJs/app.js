@@ -83,7 +83,7 @@ inputSearch.addEventListener('keydown', function (element) {
 
       for (var i = 0; i <= tempsNow.length; i++) {
 
-        images[i].src = `/weatherImage/${icons[i]}.png`;
+        images[i].src = `https://github.com/JavadRafieii/worldweather/tree/master/weatherImage/${icons[i]}.png`;
 
         tempsNow[i].innerHTML = `<span class="temp-min-now"><i class="bi bi-arrow-down"></i>
         ${tempMin[i]}°C</span> ${temps[i]}°C <span class="temp-max-now">${tempMax[i]}°C <i class="bi bi-arrow-up"></i>
