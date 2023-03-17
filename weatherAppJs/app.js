@@ -77,7 +77,7 @@ inputSearch.addEventListener('keydown', function (element) {
       // console.log(windSpeed);
       // console.log(humidity);
       // console.log(descriptions);
-      // console.log(icons);
+      console.log(icons);
       // console.log(tempsNow)
       locationWeather.innerHTML = `<i class="bi bi-geo-alt-fill"></i> ${cityName}, ${country}`;
 
